@@ -9,8 +9,9 @@ export default (state, action) => {
       };
     case "ADD_TRANSCATION":
       return {
+  transactions: [action.payload, ...state.transactions],
         ...state,
-        transactions: [action.payload, ...state.transactions],
+      
       };
     default:
       return state;
